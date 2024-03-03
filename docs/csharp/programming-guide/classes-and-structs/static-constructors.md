@@ -17,8 +17,9 @@ There are several actions that are part of static initialization. Those actions 
 1. *Static fields are set to 0*. This is typically done by the runtime.
 1. *Static field initializers run*. The static field initializers in the most derived type run.
 1. *Base type static field initializers run*. Static field initializers starting with the direct base through each base type to <xref:System.Object?displayProperty=fullName>.
-1. *Base static constructors run*. Any static constructors, starting with <xref:System.Object.%23ctor%2A?displayProperty=nameWithType> through each base class to the direct base class.
 1. *The static constructor runs*. The static constructor for the type runs.
+1. *Base static constructors run*. Any static constructors, starting with the direct base through each base type to <xref:Object.Object?displayProperty=fullName>.
+1. *The normal default constructors runs*, starting with <xref:System.Object.%23ctor%2A?displayProperty=nameWithType> through each base class to the direct base class to the type.
 
 A [module initializer](../../language-reference/attributes/general.md#moduleinitializer-attribute) can be an alternative to a static constructor. For more information, see the [specification for module initializers](~/_csharplang/proposals/csharp-9.0/module-initializers.md).
 
